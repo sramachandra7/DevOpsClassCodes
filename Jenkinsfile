@@ -12,7 +12,7 @@ pipeline {
             agent any
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/edureka-git/DevOpsClassCodes.git/'
+                git 'https://github.com/sramachandra7/DevOpsClassCodes.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn compile"
@@ -54,7 +54,7 @@ pipeline {
         stage('Package') {
             agent {label 'ubuntu_slave'}
             steps {
-                git 'https://github.com/edureka-git/DevOpsClassCodes.git/'
+                git 'https://github.com/sramachandra7/DevOpsClassCodes.git'
                 sh "mvn package"
             }
         }
